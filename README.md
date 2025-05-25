@@ -1,6 +1,6 @@
 # 💰 Sistema Bancário em Python
 
-Desafio de projeto do curso **Vivo - Python AI Backend Developer**, da [DIO](https://www.dio.me/).
+Desafio de projeto do curso **Vivo - Python AI Backend Developer**, da [DIO](https://web.dio.me/track/coding-future-vivo-python-ai-backend-developer).
 
 ## 📌 Descrição
 
