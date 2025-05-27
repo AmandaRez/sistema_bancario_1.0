@@ -1,43 +1,68 @@
 # 💰 Sistema Bancário em Python
 
-Desafio de projeto do curso **Vivo - Python AI Backend Developer**, da [DIO](https://www.dio.me/).
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
+[![Project Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
+[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 
-## 📌 Descrição
+Este repositório contém **códigos autorais desenvolvidos por mim** como parte do desafio do curso **Vivo - Python AI Backend Developer**, da [DIO](https://www.dio.me/).
 
-Neste projeto, foi desenvolvido um **Sistema Bancário simples utilizando Python**, com três operações principais:
+> 🔥 Destaque: O ficheiro `sistema_bancario_2.0.py` é uma versão **completamente independente**, criada do zero sem seguir o código sugerido. Esta versão modularizada representa a consolidação prática do conhecimento adquirido durante o desafio.
 
-- **Depósito**
-- **Saque**
-- **Extrato**
+---
 
-O sistema simula o funcionamento básico de um banco, considerando regras como:
+## 📌 Descrição do Projeto
 
-- Limite de **3 saques diários**
-- Valor máximo de **R$ 500,00 por saque**
-- Depósitos e saques válidos apenas para valores **maiores que zero**
+Este projeto simula um sistema bancário simples com funcionalidades como:
 
-## 🎯 Objetivo do Projeto
+- Depósito
+- Saque
+- Extrato
+- Criação de utilizadores (CPF único)
+- Criação e gestão de contas bancárias associadas
+- Controlo de limites e regras por operação
 
-Este desafio teve como objetivo aplicar conhecimentos em lógica de programação e estruturas básicas da linguagem Python para criar um sistema funcional que simule operações bancárias. Além de praticar o uso de variáveis, estruturas de repetição e condicionais, o projeto também incentiva a criação de soluções práticas e eficientes para problemas do dia a dia.
+A interface é totalmente via terminal, e o código está organizado em funções reutilizáveis e bem definidas.
 
-## 📂 Estrutura do Repositório
+---
 
-O repositório contém os seguintes ficheiros:
+## 🧱 Estrutura dos Códigos
 
-- `sistema_bancario_1.0.py`: versão inicial desenvolvida por mim, sem nenhum direcionamento.
-- `sistema_bancario_sugestao.py`: versão baseada nas orientações fornecidas pelo formador da DIO.
-- `README.md`: este ficheiro com a explicação do projeto.
+| Ficheiro                          | Descrição                                                                 |
+|----------------------------------|---------------------------------------------------------------------------|
+| `sistema_bancario_2.0.py`        | ✅ **Versão principal e autoral**, modularizada, criada sem base externa. |
+| `sistema_bancario_1.0.py`        | Primeira tentativa, código linear simples sem modularização.              |
+| `sistema_bancario_sugestao.py`   | Versão baseada no código de exemplo do desafio DIO.                       |
+| `sistema_bancario_sugestao2.py`  | Nova tentativa a partir da sugestão, para comparação.                     |
 
-## 🧠 O que foi aprendido
+---
 
-- Operações básicas com Python
-- Manipulação de listas
-- Condições e laços de repetição
-- Regras de negócio simples (limites de saque, verificação de saldo)
-- Formatação de valores monetários
-- Interação com o utilizador via terminal
+## 🎯 Objetivos de Aprendizagem
 
-## 🚀 Como executar
+- Praticar lógica de programação em Python
+- Utilizar funções com parâmetros posicionais e nomeados (`/`, `*`)
+- Trabalhar com estruturas como listas e dicionários
+- Validar entradas do utilizador
+- Aplicar regras de negócio simples
+- Organizar o código de forma modular e escalável
+
+---
+
+## 🧠 Aprendizagens e Destaques
+
+- ✅ Criação de funções puras e bem separadas
+- ✅ Verificação de CPF único por utilizador
+- ✅ Organização e reutilização do código
+- ✅ Uso de condicionais e loops
+- ✅ Exibição formatada de valores e extratos
+
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos:
+- Python 3.10 ou superior
+
+### Passos:
 
 1. Clone o repositório:
    ```bash
