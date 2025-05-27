@@ -47,7 +47,6 @@ def criar_usuario():
 def criar_conta(usuario):
     print("NOVA CONTA".center(30, "-"), "\n")
     AGENCIA = "0001"  # Agência padrão
-    LIMITE_SAQUES = 3 
     numero_conta = len(contas) + 1 
     conta = {
         "numero": numero_conta,
@@ -57,7 +56,6 @@ def criar_conta(usuario):
         "saldo": 0.0,        
         "depositos": [],
         "saques": [],
-        "limite_saque_diário": LIMITE_SAQUES
     }
 
     contas.append(conta)
@@ -69,13 +67,17 @@ def listar_contas(usuario):
     contas_usuario = [conta for conta in contas if conta['usuario']['cpf'] == usuario['cpf']]
     for conta in contas_usuario:
         print(f"Conta {conta['numero']} - Agência {conta['agencia']} - Saldo: R$ {conta['saldo']:.2f}")
-    return contas_usuario
+    return usuario, contas_usuario
 
 def selecionar_conta(usuario):
     print(f"Olá, {usuario['nome']['Nome']}!\n")
-    contas_disponiveis = listar_contas(usuario)
-    print(f"Suas contas disponíveis: {contas_disponiveis}\n")
-
+    contas_usuario = listar_contas(usuario)
+    
+    if not contas_usuario:
+        print("Você não possui contas abertas. Por favor, crie uma nova conta.\n")
+        criar_conta(usuario)
+        return
+    
     escolha_conta = int(input("Digite o número da conta que deseja acessar, ou 0 para criar uma nova conta: \n"))
         
     if escolha_conta == 0:
@@ -151,13 +153,13 @@ def main():
     while True:
         cpf = input("Para começar, informe o CPF do cliente, ou 0 para criar um novo usuário.\n")
     
-        if not cpf.isdigit() or len(cpf) != 11:
-            print("CPF inválido! O CPF deve conter 11 dígitos.\n")
-            return
-        
-        elif cpf == "0":
+        if cpf == "0":
             criar_usuario()
         
+        elif not cpf.isdigit() or len(cpf) != 11:
+            print("CPF inválido! O CPF deve conter 11 dígitos.\n")
+            return
+               
         elif cpf in [usuario['cpf'] for usuario in usuarios]:
             usuario = next((usuario for usuario in usuarios if usuario['cpf'] == cpf), None)
             selecionar_conta(usuario)
@@ -177,7 +179,7 @@ def apresentar_menu(conta):
         elif opcao == "2":
             valor = informar_valor()
             if valor:
-                conta['saldo'] = realizar_saque(valor, saques=conta['saques'], saldo=conta['saldo'], limite_saque_diario=conta['limite_saque_diário'])
+                conta['saldo'] = realizar_saque(valor=valor, saques=conta['saques'], saldo=conta['saldo'])
                         
         elif opcao == "3":
             solicitar_extrato(
