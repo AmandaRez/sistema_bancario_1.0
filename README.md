@@ -1,8 +1,12 @@
 # 💰 Sistema Bancário em Python
 
+<<<<<<< HEAD
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
 [![Project Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
+=======
+Desafio de projeto do curso **Vivo - Python AI Backend Developer**, da [DIO](https://web.dio.me/track/coding-future-vivo-python-ai-backend-developer).
+>>>>>>> fc51b8db81ed7fa469e1c4026503e57ea69de3e9
 
 Este repositório contém **códigos autorais desenvolvidos por mim** como parte do desafio do curso **Vivo - Python AI Backend Developer**, da [DIO](https://www.dio.me/).
 
@@ -66,4 +70,4 @@ A interface é totalmente via terminal, e o código está organizado em funçõe
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/AmandaRez/sistema_bancario_1.0
